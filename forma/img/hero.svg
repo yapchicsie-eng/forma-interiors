@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <title>Sunlit living room with three arched windows and a terracotta plaster wall</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#EFE9DF"/>
+      <stop offset="1" stop-color="#DDD5C8"/>
+    </linearGradient>
+    <linearGradient id="ceil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9C1B3"/>
+      <stop offset="1" stop-color="#C9C1B3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BDB4A5"/>
+      <stop offset="1" stop-color="#9F9686"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFBF2"/>
+      <stop offset="1" stop-color="#F6E6CC"/>
+    </linearGradient>
+    <linearGradient id="terra" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9C573F"/>
+      <stop offset="0.35" stop-color="#B66B4E"/>
+      <stop offset="1" stop-color="#A65F45"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1E1B19" stop-opacity="0.38"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="soft2" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/>
+    </filter>
+    <clipPath id="floorclip"><rect x="0" y="742" width="1600" height="258"/></clipPath>
+  </defs>
+
+  <!-- back wall + ceiling -->
+  <rect width="1600" height="1000" fill="url(#wall)"/>
+  <rect width="1600" height="150" fill="url(#ceil)"/>
+
+  <!-- arched windows -->
+  <g>
+    <path d="M250 742V290A100 100 0 0 1 450 290V742Z" fill="#B9B0A1"/>
+    <path d="M262 742V292A88 88 0 0 1 438 292V742Z" fill="url(#glass)"/>
+    <path d="M500 742V290A100 100 0 0 1 700 290V742Z" fill="#B9B0A1"/>
+    <path d="M512 742V292A88 88 0 0 1 688 292V742Z" fill="url(#glass)"/>
+    <path d="M750 742V290A100 100 0 0 1 950 290V742Z" fill="#B9B0A1"/>
+    <path d="M762 742V292A88 88 0 0 1 938 292V742Z" fill="url(#glass)"/>
+    <!-- mullions -->
+    <g stroke="#8A8274" stroke-width="3" opacity=".75">
+      <path d="M350 204V742M600 204V742M850 204V742"/>
+      <path d="M262 520H438M512 520H688M762 520H938"/>
+    </g>
+  </g>
+
+  <!-- floor -->
+  <rect y="742" width="1600" height="258" fill="url(#floor)"/>
+  <rect y="736" width="1600" height="8" fill="#A59D8E"/>
+  <g clip-path="url(#floorclip)">
+    <g filter="url(#soft)" fill="#FFF5DD" opacity=".62">
+      <path d="M262 748H438L760 1000H420Z"/>
+      <path d="M512 748H688L1010 1000H670Z"/>
+      <path d="M762 748H938L1260 1000H920Z"/>
+    </g>
+  </g>
+
+  <!-- terracotta plaster wall -->
+  <rect x="1130" width="470" height="742" fill="url(#terra)"/>
+  <rect x="1130" width="90" height="742" fill="url(#edge)"/>
+  <path d="M1270 700V420A90 90 0 0 1 1450 420V700Z" fill="#8A4A35"/>
+  <path d="M1282 700V422A78 78 0 0 1 1438 422V700Z" fill="#A25B42"/>
+  <path d="M1282 700V422A78 78 0 0 1 1360 344V700Z" fill="#B97055" opacity=".55"/>
+  <rect x="1250" y="700" width="220" height="42" fill="#D9D0C2"/>
+  <rect x="1250" y="700" width="220" height="6" fill="#EDE6D9"/>
+  <!-- vase on shelf -->
+  <path d="M1336 700c-16-4-20-34-14-58 4-14 28-14 32 0 6 24 2 54-18 58z" fill="#EEE8DC"/>
+  <g stroke="#4B3E33" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9">
+    <path d="M1338 644C1338 590 1330 540 1306 492"/>
+    <path d="M1338 644C1342 580 1360 536 1388 500"/>
+    <path d="M1338 644C1338 600 1350 560 1344 512"/>
+  </g>
+  <g fill="#4B3E33" opacity=".9"><ellipse cx="1306" cy="490" rx="5" ry="9"/><ellipse cx="1389" cy="498" rx="5" ry="9" transform="rotate(30 1389 498)"/><ellipse cx="1344" cy="508" rx="5" ry="9"/></g>
+  <path d="M1130 742H1600V1000H1130Z" fill="url(#floor)"/>
+  <rect x="1130" y="736" width="470" height="8" fill="#A59D8E"/>
+
+  <!-- lamp -->
+  <path d="M120 748V430Q120 330 222 330" stroke="#2B2927" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M190 352A34 34 0 0 1 258 352Z" fill="#2B2927"/>
+  <ellipse cx="120" cy="752" rx="46" ry="8" fill="#2B2927"/>
+
+  <!-- sofa -->
+  <ellipse cx="590" cy="770" rx="360" ry="20" fill="#1E1B19" opacity=".32" filter="url(#soft2)"/>
+  <rect x="300" y="590" width="580" height="110" rx="52" fill="#CFC6B7"/>
+  <rect x="278" y="630" width="90" height="130" rx="44" fill="#DAD2C5"/>
+  <rect x="812" y="630" width="90" height="130" rx="44" fill="#DAD2C5"/>
+  <rect x="340" y="660" width="500" height="92" rx="40" fill="#E4DDD1"/>
+  <path d="M590 664V750" stroke="#CFC6B7" stroke-width="3"/>
+  <rect x="740" y="612" width="84" height="84" rx="22" fill="#B4684B" transform="rotate(-8 782 654)"/>
+  <rect x="404" y="618" width="96" height="70" rx="20" fill="#F2EDE4" transform="rotate(5 452 653)"/>
+
+  <!-- travertine plinth table -->
+  <ellipse cx="1030" cy="772" rx="110" ry="14" fill="#1E1B19" opacity=".3" filter="url(#soft2)"/>
+  <path d="M938 700V756A92 20 0 0 0 1122 756V700Z" fill="#D2C9B9"/>
+  <ellipse cx="1030" cy="700" rx="92" ry="20" fill="#E9E2D5"/>
+  <path d="M960 718c20 5 40 4 66 0M996 742c26 4 52 2 90-4" stroke="#C3B9A7" stroke-width="2" fill="none" opacity=".8"/>
+  <!-- bowl -->
+  <path d="M996 692a34 14 0 0 0 68 0Z" fill="#2B2927"/>
+  <ellipse cx="1030" cy="692" rx="34" ry="8" fill="#3A3733"/>
+
+  <!-- finish -->
+  <rect width="1600" height="1000" fill="url(#vig)"/>
+  <rect width="1600" height="1000" filter="url(#grain)" opacity=".16" style="mix-blend-mode:multiply"/>
+</svg>
